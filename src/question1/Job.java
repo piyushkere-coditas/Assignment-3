@@ -10,11 +10,12 @@ public class Job extends Thread{
     public static synchronized void sync(){
         String name = Thread.currentThread().getName();
         try {
+            System.out.println("Runner: "+name);
             Thread.sleep(500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Runner: "+name);
+
     }
 
 }
