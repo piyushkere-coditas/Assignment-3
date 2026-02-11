@@ -6,6 +6,7 @@ public class Trigger {
         Job job2 = new Job();
         Job job3 = new Job();
 
+        Thread.sleep(1000);
         job1.start();
         job2.start();
         job3.start();
