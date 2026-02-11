@@ -3,7 +3,11 @@ package question1;
 public class Job extends Thread{
 
     @Override
-    public synchronized void run() {
+    public void run() {
+        sync();
+    }
+
+    public static synchronized void sync(){
         String name = Thread.currentThread().getName();
         try {
             Thread.sleep(500);
@@ -11,6 +15,6 @@ public class Job extends Thread{
             throw new RuntimeException(e);
         }
         System.out.println("Runner: "+name);
-
     }
+
 }
